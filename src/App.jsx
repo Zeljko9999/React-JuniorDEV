@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Radionice from "./components/Radionice";
+//import Predavaci from "./components/Predavaci";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Navbar/>
          <Switch>
           <Route exact path="/" component={Radionice} />
+
         </Switch>
      </Router></>
   )

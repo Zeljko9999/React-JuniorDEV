@@ -2,6 +2,7 @@
     border: 2px solid black;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .navbar a {
     margin: 15px;
@@ -14,3 +15,55 @@
 .navbar a:hover {
     color: grey;
   }
+
+.putanje {
+    display: flex;
+}
+
+.toggleButton {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: #d2d2d2;
+    width: 80px;
+    height: 30px;
+    border-radius: 8rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.button::before {
+    content: '';
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+input:checked+.button {
+    background-color: #0991be;
+}
+
+input:checked+.button::before {
+    transform: translateX(50px);
+}
+
+.checkboxInput {
+    display: none;
+}
+
+.user {
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-right: 15px;
+}
