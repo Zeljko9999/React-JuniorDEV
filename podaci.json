@@ -1,0 +1,100 @@
+{
+  "radionice": [
+    {
+      "id": "1",
+      "ime": "React",
+      "datum": "01.01.2025",
+      "predavac": "Luka Smolcic",
+      "opis": "Kratki opis radionice 1",
+      "tezina": "junior",
+      "tema": "react",
+      "broj_prijava": 9
+    },
+    {
+      "id": "2",
+      "ime": ".NET",
+      "datum": "01.01.2024",
+      "predavac": "Ante Bartulovic",
+      "opis": "Kratki opis radionice 2",
+      "tezina": "mid",
+      "tema": ".net",
+      "broj_prijava": 7
+    },
+    {
+      "id": "3",
+      "ime": "C++",
+      "datum": "01.01.2023",
+      "predavac": "Goran Zaharija",
+      "opis": "Kratki opis radionice 3",
+      "tezina": "senior",
+      "tema": "cpp",
+      "broj_prijava": 4
+    }
+  ],
+  "predavaci": [
+    {
+      "id": "1",
+      "ime": "Luka Smolcic",
+      "biografija": "Biografija predavaca 1",
+      "organizacija": "Locastic"
+    },
+    {
+      "id": "2",
+      "ime": "Ante Bartulovic",
+      "biografija": "Biografija predavaca 2",
+      "organizacija": "PMFST"
+    },
+    {
+      "id": "3",
+      "ime": "Goran Zaharija",
+      "biografija": "Biografija predavaca 3",
+      "organizacija": "Digitalna Dalmacija"
+    }
+  ],
+  "organizacije": [
+    {
+      "id": "organizacija_1",
+      "ime": "Organizacija 1",
+      "opis": "Opis organizacije 1",
+      "radionice": [
+        "radionica_1"
+      ]
+    }
+  ],
+  "tezine": [
+    {
+      "id": "junior",
+      "ime": "junior"
+    },
+    {
+      "id": "mid",
+      "ime": "mid"
+    },
+    {
+      "id": "senior",
+      "ime": "senior"
+    }
+  ],
+  "teme": [
+    {
+      "id": "react",
+      "ime": "react"
+    },
+    {
+      "id": "express",
+      "ime": "express"
+    },
+    {
+      "id": "next_js",
+      "ime": "next.js"
+    },
+    {
+      "id": ".net",
+      "ime": ".net"
+    },
+    {
+      "id": "cpp",
+      "ime": "cpp"
+    }
+  ]
+}

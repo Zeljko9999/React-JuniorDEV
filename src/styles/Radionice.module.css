@@ -1,0 +1,40 @@
+.radioniceSve {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-bottom: 10px;
+  }
+
+  .filterTema {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filterTezina {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filterNaslov {
+    display: inline-block;
+    font-family:  cursive;
+    color: rgb(89, 89, 191);
+    font-size: 20px;
+    padding-right: 20px;
+  }
+  
+  .filterLabela {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+.filterRedak {
+    margin-bottom: 10px;
+}
