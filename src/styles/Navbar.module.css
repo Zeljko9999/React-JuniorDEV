@@ -5,9 +5,10 @@
     justify-content: space-between;
 }
 .navbar a {
-    margin: 15px;
+    margin: 20px;
+    margin-right: 40px;
     color: black;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
 }

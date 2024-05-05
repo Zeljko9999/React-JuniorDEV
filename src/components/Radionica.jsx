@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import stil from '/src/styles/Radionica.module.css'
 import Modal from "./Modal";
+import { useContext } from "react";
+import UserContext from "./Context";
+import { Link } from 'react-router-dom';
+
+
 
 function Radionica({ rez, id, dodaj  }) {
+
+const user = useContext(UserContext);
 
 const [uredi, postaviUredi] = useState(false);
 const [prijava, postaviPrijavi] = useState(false);
@@ -53,6 +60,11 @@ const [showModal, setShowModal] = useState(false);
             <span>težina:</span><span>{rez.tezina}</span>
           </div>
           <button onClick={() => setShowModal(true)}> Prijavi se</button>
+          {
+              user === true ? (<Link to="/radionice/edit"> <button  style={{ color: '#e0bf09', border:'2px solid #e0bf09',
+               marginLeft:'20px', width:'65px', fontWeight:'bold'}}>Uredi</button></Link>)
+                  : null
+          }
         </div>
     </div>
     {showModal && ( 

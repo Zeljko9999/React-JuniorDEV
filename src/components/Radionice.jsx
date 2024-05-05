@@ -2,8 +2,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Radionica from "./Radionica";
 import stil from '/src/styles/Radionice.module.css'
+import { useContext } from "react";
+import UserContext from "./Context";
+
  
 function Radionice() {
+  
+  const user = useContext(UserContext);
 
   const [radionice, prikaziRadionice] = useState([]);
   const [tezine, postaviTezine] = useState([]);
@@ -62,6 +67,12 @@ function Radionice() {
   };
 
   return (
+    <>
+    {
+        user === true ? (<button  style={{ color: '#e0bf09', border:'2px solid #e0bf09',
+         marginRight:'20px', height:'40px', display:'block', marginInlineStart:'auto', fontWeight:'bold'}}>+ Dodaj novu radionicu</button>)
+            : null
+    }
     <div className={stil.radioniceSve}>
     <div className={stil.filter}>
       <div className={stil.filterTema}>
@@ -127,6 +138,7 @@ function Radionice() {
     
     
 </div>
+</>
   );
 }
 
