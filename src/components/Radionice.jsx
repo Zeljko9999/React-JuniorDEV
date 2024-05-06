@@ -4,6 +4,7 @@ import Radionica from "./Radionica";
 import stil from '/src/styles/Radionice.module.css'
 import { useContext } from "react";
 import UserContext from "./Context";
+import { Link } from 'react-router-dom';
 
  
 function Radionice() {
@@ -69,7 +70,8 @@ function Radionice() {
   return (
     <>
     {
-        user === true ? (<button className={stil.addRadionaButton}>+ Dodaj novu radionicu</button>)
+        user === true ? (<div className={stil.dodajRadionuContainer}><Link to= "/radionice/create"><button className={stil.addRadionaButton}
+          >+ Dodaj novu radionicu</button></Link></div>)
             : null
     }
     <div className={stil.radioniceSve}>

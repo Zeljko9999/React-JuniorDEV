@@ -46,7 +46,7 @@
   transition: all 0.25s ease;
   margin-right:20px;
   height:40px; 
-  display:block;
+  display: ruby-text;
   margin-inline-start:auto;
 }
 
@@ -55,3 +55,7 @@
     transform: translateY(-5px);
     background: #f4f2f2;
   }
+
+.dodajRadionuContainer a {
+  display: block;
+}

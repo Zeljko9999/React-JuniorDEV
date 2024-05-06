@@ -7,6 +7,7 @@ import UserContext from "./components/Context"
 import Navbar from "./components/Navbar";
 import Radionice from "./components/Radionice";
 import Promjena from "./components/Promjena";
+import UnosForma from "./components/UnosForma";
 //import Predavaci from "./components/Predavaci";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
          <Switch>
           <Route exact path="/" component={Radionice} />
           <Route exact path="/radionice/edit/:id" component={Promjena} />
+          <Route exact path="/radionice/create" component={UnosForma} />
         </Switch>
      </Router>
      </UserContext.Provider>

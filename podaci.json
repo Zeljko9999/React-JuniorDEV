@@ -29,6 +29,15 @@
       "tezina": "senior",
       "tema": "cpp",
       "broj_prijava": 4
+    },
+    {
+      "id": "ac85",
+      "ime": "Next.js",
+      "datum": "01.05.2024",
+      "predavac": "Luka Smolcic",
+      "opis": "Kratki opis radione 4",
+      "tezina": "mid",
+      "tema": "next.js"
     }
   ],
   "predavaci": [
