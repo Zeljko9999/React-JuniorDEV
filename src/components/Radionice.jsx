@@ -69,8 +69,7 @@ function Radionice() {
   return (
     <>
     {
-        user === true ? (<button  style={{ color: '#e0bf09', border:'2px solid #e0bf09',
-         marginRight:'20px', height:'40px', display:'block', marginInlineStart:'auto', fontWeight:'bold'}}>+ Dodaj novu radionicu</button>)
+        user === true ? (<button className={stil.addRadionaButton}>+ Dodaj novu radionicu</button>)
             : null
     }
     <div className={stil.radioniceSve}>

@@ -43,8 +43,8 @@ const [showModal, setShowModal] = useState(false);
           </div>
           <button onClick={() => setShowModal(true)}> Prijavi se</button>
           {
-              user === true ? (<Link to={`/radionice/edit/${id}`}> <button  style={{ color: '#e0bf09', border:'2px solid #e0bf09',
-               marginLeft:'20px', width:'65px', fontWeight:'bold'}}>Uredi</button></Link>)
+              user === true ? (<Link to={`/radionice/edit/${id}`}> <button className={stil.editRadionaButton}  
+              >Uredi</button></Link>)
                   : null
           }
         </div>

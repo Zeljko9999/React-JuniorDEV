@@ -34,3 +34,18 @@ a {
      display: inline-block;
 }
 
+.editRadionaButton {
+ color: #e0bf09;
+  border: 2px solid #e0bf09;
+  margin-left: 20px;
+  width: 65px;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+
+.editRadionaButton:hover {
+    box-shadow: 0 10px 20px -10px rgba(228, 114, 123, 0.6);
+    transform: translateY(-5px);
+    background: #f4f2f2;
+  }
+
