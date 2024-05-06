@@ -1,0 +1,66 @@
+.forma { 
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    margin: 50px 200px;
+    justify-content: space-between;
+}
+
+.formaPrva {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+
+.radionicaPolje { 
+    width: 350px;
+    padding: 7px;
+    margin: 15px;
+    border: 2px solid black;
+    font-size: 16px;
+  }
+  
+.radionicaOpisPolje {
+    padding: 7px 7px 70px 7px;
+    margin: 15px;
+    border: 2px solid black;
+    font-size: 16px;
+  }
+
+.radionicaSelect {
+    width: 370px;
+    padding: 7px;
+    margin: 15px;
+    border: 2px solid black;
+    font-size: 16px;
+  }
+
+  .promjenaButton {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: none;
+    color: #fff;
+    background: #ff3e4e;
+    transition: all 0.25s ease;
+    width: 100px;
+    margin: 20px;
+    height: 35px;
+  }
+  
+  .promjenaButton:hover {
+    box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
+    transform: translateY(-5px);
+    background: #ff3e4e;
+  }
+
+  .forma a {
+    max-width: 0px;
+  }
+
+  .successMessage {
+    color: rgb(20, 190, 20);
+  }

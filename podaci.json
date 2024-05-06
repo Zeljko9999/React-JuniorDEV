@@ -2,13 +2,13 @@
   "radionice": [
     {
       "id": "1",
-      "ime": "React",
-      "datum": "01.01.2025",
+      "ime": "React DEV",
+      "datum": "01.08.2024",
       "predavac": "Luka Smolcic",
-      "opis": "Kratki opis radionice 1",
+      "opis": "Kratki opis radione 1",
       "tezina": "junior",
       "tema": "react",
-      "broj_prijava": 9
+      "broj_prijava": 11
     },
     {
       "id": "2",

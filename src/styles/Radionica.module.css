@@ -30,3 +30,7 @@ button {
     margin-bottom: 20px;
 }
 
+a {
+     display: inline-block;
+}
+

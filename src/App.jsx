@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import UserContext from "./components/Context"
 import Navbar from "./components/Navbar";
 import Radionice from "./components/Radionice";
+import Promjena from "./components/Promjena";
 //import Predavaci from "./components/Predavaci";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
         <Navbar postaviAdmina={postaviAdmina}/>
          <Switch>
           <Route exact path="/" component={Radionice} />
-
+          <Route exact path="/radionice/edit/:id" component={Promjena} />
         </Switch>
      </Router>
      </UserContext.Provider>
