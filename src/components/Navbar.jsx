@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import stil from '/src/styles/Navbar.module.css'
-import { Link } from 'react-router-dom';
 import { useContext } from "react";
 import UserContext from "./Context";
+import { NavLink } from 'react-router-dom';
 
 function Navbar({postaviAdmina}) {
 
@@ -21,12 +21,12 @@ useEffect(() => {
 return ( 
 <div className={stil.navbar}>
          <div className={stil.putanje}>
-          <Link to="/">Radionice</Link>
+          <NavLink exact to="/" activeStyle={{ color: 'green' }} >Radionice</NavLink >
 
-          <Link to="/predavaci">Predavači</Link>
+          <NavLink  to="/predavaci" activeStyle={{ color: 'green' }}>Predavači</NavLink >
 
           {
-                user === true ? (<Link to="/administracija"  style={{ color: '#e0bf09' }}>Administracija</Link>)
+                user === true ? (<NavLink  to="/administracija" activeStyle={{ color: 'green' }}  style={{ color: '#e0bf09' }}>Administracija</NavLink >)
                     : null
             }
         </div>

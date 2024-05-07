@@ -76,7 +76,7 @@ function UnosFormaPredavac() {
             <button className={stil.promjenaButton} type='submit'>Spremi</button>
             {showSuccessMessage && (
             <div className={stil.successMessage}>
-             Predavač je uspješno uređen!
+             Predavač je uspješno izrađen!
             </div>
             )}
           </div>

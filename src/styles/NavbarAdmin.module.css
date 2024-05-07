@@ -1,0 +1,43 @@
+.navbarAdmin {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 65px;
+    margin:30px;
+}
+.navbarAdmin a {
+    margin: 15px;
+    margin-right: 40px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbarAdmin a:hover {
+    color: grey;
+  }
+
+.putanjeAdmin {
+    display: flex;
+}
+
+
+.addRadionaButtonAdmin {
+    color: #e0bf09;
+    border: 2px solid #e0bf09;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    height:40px; 
+    display: ruby-text;
+    margin-inline-start:auto;
+    width: 100px;
+    margin-top: 0px;
+  }
+  
+  .addRadionaButtonAdmin:hover {
+      box-shadow: 0 10px 20px -10px rgba(228, 114, 123, 0.6);
+      transform: translateY(-5px);
+      background: #f4f2f2;
+    }

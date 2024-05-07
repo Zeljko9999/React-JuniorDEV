@@ -1,16 +1,6 @@
 {
   "radionice": [
     {
-      "id": "1",
-      "ime": "React DEV",
-      "datum": "01.08.2024",
-      "predavac": "Luka Smolcic",
-      "opis": "Kratki opis radione 1",
-      "tezina": "junior",
-      "tema": "react",
-      "broj_prijava": 11
-    },
-    {
       "id": "2",
       "ime": ".NET",
       "datum": "01.01.2024",
@@ -49,13 +39,23 @@
       "tezina": "junior",
       "tema": "react",
       "broj_prijava": 0
+    },
+    {
+      "id": "1819",
+      "ime": "React",
+      "datum": "01.03.2025",
+      "predavac": "Luka Smolcic",
+      "opis": "Kratki opis radione 1",
+      "tezina": "junior",
+      "tema": "react",
+      "broj_prijava": 0
     }
   ],
   "predavaci": [
     {
       "id": "1",
       "ime": "Luka Smolcic",
-      "biografija": "Biografija predavaca 1",
+      "biografija": "Biografija predavacca 1",
       "organizacija": "Locastic",
       "tema": "next.js"
     },
@@ -74,24 +74,22 @@
       "tema": ".net"
     },
     {
-      "id": "59a8",
+      "id": "70fb",
       "ime": "Ivan Zoraja",
-      "biografija": "Biografija predavača 4",
+      "biografija": "Biografija predavaca 4",
       "organizacija": "FESB",
       "tema": "cpp"
     }
   ],
   "organizacije": [
     {
-      "id": "organizacija_1",
+      "id": "1",
       "ime": "PMFST",
       "opis": "Opis organizacije 1",
-      "radionice": [
-        "radionica_1"
-      ]
+      "radionice": "Typescript"
     },
     {
-      "id": "organizacija_2",
+      "id": "2",
       "ime": "Digitalna Dalmacija",
       "opis": "Opis organizacije 2",
       "radionice": [
@@ -99,7 +97,7 @@
       ]
     },
     {
-      "id": "organizacija_3",
+      "id": "3",
       "ime": "Locastic",
       "opis": "Opis organizacije 3",
       "radionice": [
@@ -107,12 +105,16 @@
       ]
     },
     {
-      "id": "organizacija_4",
+      "id": "9c18",
+      "ime": "KING ICT",
+      "opis": "Kratki opis organizacije 5",
+      "radionice": ".NET"
+    },
+    {
+      "id": "be25",
       "ime": "FESB",
-      "opis": "Opis organizacije 4",
-      "radionice": [
-        "radionica_1"
-      ]
+      "opis": "Kratki opis organizacije 2",
+      "radionice": "C++"
     }
   ],
   "tezine": [
