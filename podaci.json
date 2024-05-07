@@ -18,26 +18,37 @@
       "opis": "Kratki opis radionice 2",
       "tezina": "mid",
       "tema": ".net",
-      "broj_prijava": 7
+      "broj_prijava": 1
     },
     {
       "id": "3",
       "ime": "C++",
       "datum": "01.01.2023",
-      "predavac": "Goran Zaharija",
+      "predavac": "Ivan Zoraja",
       "opis": "Kratki opis radionice 3",
       "tezina": "senior",
       "tema": "cpp",
-      "broj_prijava": 4
+      "broj_prijava": 0
     },
     {
-      "id": "ac85",
+      "id": "a77a",
       "ime": "Next.js",
       "datum": "01.05.2024",
       "predavac": "Luka Smolcic",
       "opis": "Kratki opis radione 4",
       "tezina": "mid",
-      "tema": "next.js"
+      "tema": "next.js",
+      "broj_prijava": 0
+    },
+    {
+      "id": "d13e",
+      "ime": "Typescript",
+      "datum": "01.01.2025",
+      "predavac": "Goran Zaharija",
+      "opis": "Kratki opis radionice 5",
+      "tezina": "junior",
+      "tema": "react",
+      "broj_prijava": 0
     }
   ],
   "predavaci": [
@@ -45,26 +56,60 @@
       "id": "1",
       "ime": "Luka Smolcic",
       "biografija": "Biografija predavaca 1",
-      "organizacija": "Locastic"
+      "organizacija": "Locastic",
+      "tema": "next.js"
     },
     {
       "id": "2",
       "ime": "Ante Bartulovic",
       "biografija": "Biografija predavaca 2",
-      "organizacija": "PMFST"
+      "organizacija": "PMFST",
+      "tema": "react"
     },
     {
       "id": "3",
       "ime": "Goran Zaharija",
       "biografija": "Biografija predavaca 3",
-      "organizacija": "Digitalna Dalmacija"
+      "organizacija": "Digitalna Dalmacija",
+      "tema": ".net"
+    },
+    {
+      "id": "59a8",
+      "ime": "Ivan Zoraja",
+      "biografija": "Biografija predavača 4",
+      "organizacija": "FESB",
+      "tema": "cpp"
     }
   ],
   "organizacije": [
     {
       "id": "organizacija_1",
-      "ime": "Organizacija 1",
+      "ime": "PMFST",
       "opis": "Opis organizacije 1",
+      "radionice": [
+        "radionica_1"
+      ]
+    },
+    {
+      "id": "organizacija_2",
+      "ime": "Digitalna Dalmacija",
+      "opis": "Opis organizacije 2",
+      "radionice": [
+        "radionica_2"
+      ]
+    },
+    {
+      "id": "organizacija_3",
+      "ime": "Locastic",
+      "opis": "Opis organizacije 3",
+      "radionice": [
+        "radionica_3"
+      ]
+    },
+    {
+      "id": "organizacija_4",
+      "ime": "FESB",
+      "opis": "Opis organizacije 4",
       "radionice": [
         "radionica_1"
       ]

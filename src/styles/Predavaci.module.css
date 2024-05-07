@@ -1,0 +1,66 @@
+.radioniceSve {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-bottom: 10px;
+  }
+
+  .filterTema {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filterTezina {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filterNaslov {
+    display: inline-block;
+    font-family:  cursive;
+    color: rgb(89, 89, 191);
+    font-size: 20px;
+    padding-right: 20px;
+  }
+  
+  .filterLabela {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+.filterRedak {
+    margin-bottom: 10px;
+}
+
+.addRadionaButton {
+  color: #e0bf09;
+  border: 2px solid #e0bf09;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  margin-right:20px;
+  height:40px; 
+  display: ruby-text;
+  margin-inline-start:auto;
+}
+
+.addRadionaButton:hover {
+    box-shadow: 0 10px 20px -10px rgba(228, 114, 123, 0.6);
+    transform: translateY(-5px);
+    background: #f4f2f2;
+  }
+
+.dodajRadionuContainer a {
+  display: block;
+}
+
+.predavaci {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

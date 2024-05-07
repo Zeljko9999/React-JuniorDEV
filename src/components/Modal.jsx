@@ -68,24 +68,25 @@ if (submitPrijava === false) {
           <button className={styles.closeBtn} onClick={() => setShowModal(false)}>
             <RiCloseLine style={{ marginBottom: "-3px" }} />
           </button>
-          <div className={styles.modalContent}>        
+          <form className={styles.modalContent} onSubmit={prijaviSe}>        
             <input type="text" id="ime" value={punoIme} className={styles.inputElement} placeholder="puno ime" onChange={(e) => handleChange1(e)} 
-                    style={{ borderColor: isValidIme ? '' : 'red' }} />
+                    style={{ borderColor: isValidIme ? '' : 'red' }} required/>
                     {!isValidIme && <p style={{ color: 'red', margin: "0px auto" }}>Name must be between 2 and 40 characters.</p>}
 
             <input type="text" id="email" placeholder="email" className={styles.inputElement} value={email} onChange={(e) => handleChange2(e)}
-                        style={{ borderColor: isValidEmail ? '' : 'red' }} />
+                        style={{ borderColor: isValidEmail ? '' : 'red' }} required />
                 {!isValidEmail && <p style={{ color: 'red', marginTop: "0px" }}>Please enter a valid email address.</p>}
 
-            <input className={styles.razlogPrijave} type="text" id="razlog" placeholder="razlog prijave" />
-          </div>
+            <input className={styles.razlogPrijave} type="text" id="razlog" placeholder="razlog prijave" required/>
+         
           <div className={styles.modalActions}>
             <div className={styles.actionsContainer}>
-              <button className={styles.prijaviBtn} onClick={() => prijaviSe()}>
+              <button className={styles.prijaviBtn} type="submit">
                 Prijavi se
               </button>
             </div>
-          </div>
+          </div> 
+        </form>
         </div>
       </div>
     </>

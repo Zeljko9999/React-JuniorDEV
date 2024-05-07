@@ -7,8 +7,17 @@ import UserContext from "./Context";
 import { Link } from 'react-router-dom';
 
  
-function Radionice() {
-  
+function Radionice(predavac) {
+
+  //provjeri zbog komponente RadionicePredavac koja salje props
+  if (predavac.hasOwnProperty('history') && predavac.hasOwnProperty('location') && predavac.hasOwnProperty('match')) {
+    predavac="";
+  }
+  else {
+    predavac = encodeURIComponent(predavac.predavac);
+  }
+
+
   const user = useContext(UserContext);
 
   const [radionice, prikaziRadionice] = useState([]);
@@ -20,7 +29,7 @@ function Radionice() {
  
  useEffect(() => {
    axios
-     .get("http://localhost:3001/radionice/")
+     .get(`http://localhost:3001/radionice?predavac=${predavac}`)
      .then(res => prikaziRadionice(res.data));
  }, []);
 

@@ -3,33 +3,28 @@ import { useState, useEffect } from "react";
 import stil from '/src/styles/Promjena.module.css'
 import { Link } from 'react-router-dom';
 
-function UnosForma() {
+function UnosFormaPredavac() {
 
-    const [predavaci, postaviPredavace] = useState([]);
-    const [tezine, postaviTezine] = useState([]);
+
+    const [organizacije, postaviOrganizacije] = useState([]);
     const [teme, postaviTeme] = useState([]);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     const [formaPodaci, postaviPodatke] = useState({
         ime: "",
-        datum: "",
-        predavac: "",
-        opis: "",
-        tezina: "",
+        biografija: "",
+        organizacija: "",
         tema: "",
-        broj_prijava: 0,
       });
 
 
     useEffect(() => {
         Promise.all([
-        axios.get("http://localhost:3001/predavaci"),
-        axios.get("http://localhost:3001/tezine"),
+        axios.get("http://localhost:3001/organizacije"),
         axios.get("http://localhost:3001/teme")
       ]) 
-          .then(([rezPredavaci, rezTezine, rezTeme]) => {
-            postaviPredavace(rezPredavaci.data);
-            postaviTezine(rezTezine.data);
+          .then(([rezOrganizacije, rezTeme]) => {
+            postaviOrganizacije(rezOrganizacije.data);
             postaviTeme(rezTeme.data);
           })
           .catch(err => console.log(err.message));
@@ -43,11 +38,11 @@ function UnosForma() {
     const handleFormSubmit = async (event) => {
       event.preventDefault();
         try {
-          await axios.post(`http://localhost:3001/radionice`, {
+          await axios.post(`http://localhost:3001/predavaci`, {
             ...formaPodaci,
           });
         } catch (error) {
-          console.error('Error while creating data:', error);
+          console.error('Error while updating data:', error);
         }
         setShowSuccessMessage(true);
         setTimeout(() => {
@@ -57,27 +52,22 @@ function UnosForma() {
 
   return (
     <>
-    <Link to="/"> <button className={stil.promjenaButton}>Natrag</button></Link>
+    <Link to="/predavaci"> <button className={stil.promjenaButton}>Natrag</button></Link>
     <form className={stil.forma} onSubmit={handleFormSubmit}>  
           <div className={stil.formaPrva} >    
             <input name='ime' type="text" id="ime"  className={stil.radionicaPolje} 
-              placeholder="Ime radionice" value={formaPodaci.ime} onChange={handleInputChange} required/>
-                   
+              placeholder="Ime predavača" value={formaPodaci.ime} onChange={handleInputChange} required/>               
 
-            <input name='datum' type="text" id="datum" placeholder="Datum održavanja" className={stil.radionicaPolje}
-               value={formaPodaci.datum} onChange={handleInputChange} required />
-               
-
-            <input name='opis' className={stil.radionicaOpisPolje} type="text" id="opis" placeholder="Opis radionice" 
-              value={formaPodaci.opis} onChange={handleInputChange} />
+            <input name='biografija' className={stil.radionicaOpisPolje} type="text" id="biografija" placeholder="Biografija" 
+              value={formaPodaci.biografija} onChange={handleInputChange} />
  
             <div>
               <select
-                name='predavac' value={formaPodaci.predavac} onChange={handleInputChange} required className={stil.radionicaSelect}>
-                <option value=''>Predavači</option>
-                  {predavaci.map(predavac => (
-                <option key={predavac.id} value={predavac.ime}>
-                 {predavac.ime}
+                name='organizacija' value={formaPodaci.organizacija} onChange={handleInputChange} required className={stil.radionicaSelect}>
+                <option value=''>Organizacija</option>
+                  {organizacije.map(organizacija => (
+                <option key={organizacija.id} value={organizacija.ime}>
+                 {organizacija.ime}
                 </option>
                 ))}
                </select>
@@ -86,7 +76,7 @@ function UnosForma() {
             <button className={stil.promjenaButton} type='submit'>Spremi</button>
             {showSuccessMessage && (
             <div className={stil.successMessage}>
-             Radionica je uspješno izrađena!
+             Predavač je uspješno uređen!
             </div>
             )}
           </div>
@@ -103,20 +93,9 @@ function UnosForma() {
                 ))}
                </select>
             </div>
-            <div>
-            <select
-                name='tezina' value={formaPodaci.tezina} onChange={handleInputChange} required className={stil.radionicaSelect}>
-                <option value=''>Težina</option>
-                  {tezine.map(tezina => (
-                <option key={tezina.id} value={tezina.ime}>
-                 {tezina.ime}
-                </option>
-                ))}
-               </select>
-            </div>
           </div>
       </form>
       </>
   )
  }; 
-export default UnosForma;
+export default UnosFormaPredavac;
