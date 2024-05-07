@@ -6,6 +6,57 @@ import { Link } from 'react-router-dom';
 
 function PromjenaPredavac() {
 
+    const { id } = useParams();
+
+    const [organizacije, postaviOrganizacije] = useState([]);
+    const [teme, postaviTeme] = useState([]);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+    const [formaPodaci, postaviPodatke] = useState({
+        ime: "",
+        biografija: "",
+        organizacija: "",
+        tema: "",
+      });
+
+
+    useEffect(() => {
+        axios
+          .get(`http://localhost:3001/predavaci/${id}`)
+          .then(res => postaviPodatke(res.data));
+      }, [id]);
+
+    useEffect(() => {
+        Promise.all([
+        axios.get("http://localhost:3001/organizacije"),
+        axios.get("http://localhost:3001/teme")
+      ]) 
+          .then(([rezOrganizacije, rezTeme]) => {
+            postaviOrganizacije(rezOrganizacije.data);
+            postaviTeme(rezTeme.data);
+          })
+          .catch(err => console.log(err.message));
+    }, []);
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        postaviPodatke({ ...formaPodaci, [name]: value });
+    }
+
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+        try {
+          await axios.patch(`http://localhost:3001/predavaci/${id}`, {
+            ...formaPodaci,
+          });
+        } catch (error) {
+          console.error('Error while updating data:', error);
+        }
+        setShowSuccessMessage(true);
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+        }, 3000);
+    };
 
   return (
     <>
