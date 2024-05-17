@@ -1,4 +1,4 @@
-import Radionice from "./Radionice";
+import Radionice from "../Radionica/Radionice";
 import { useParams } from 'react-router-dom';
 
 function RadionicePredavac() {

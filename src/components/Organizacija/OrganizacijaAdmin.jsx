@@ -3,7 +3,7 @@ import axios from "axios";
 import stil from '/src/styles/RadionicaAdmin.module.css'
 import BrisanjeOrganizacija from "./BrisanjeOrganizacija";
 import { useContext } from "react";
-import UserContext from "./Context";
+import UserContext from "../Context";
 import { Link } from 'react-router-dom';
 
 

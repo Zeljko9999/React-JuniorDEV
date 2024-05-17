@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Predavac from "./Predavac";
 import stil from '/src/styles/Predavaci.module.css'
 import { useContext } from "react";
-import UserContext from "./Context";
+import UserContext from "../Context";
 import { Link } from 'react-router-dom';
 
  
